@@ -10,7 +10,6 @@ const FRAMES = [
   '/images/hero/hero-angle-2.jpg',
   '/images/hero/hero-angle-6.jpg',
   '/images/hero/hero-angle-4.jpg',
-  '/images/hero/hero-angle-5.jpg',
 ];
 
 const AUTO_MS = 3000;
