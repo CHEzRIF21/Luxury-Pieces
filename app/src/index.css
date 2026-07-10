@@ -384,9 +384,13 @@ img {
   background: #000;
 }
 
-.hero__video {
+.hero-video-slot {
   position: absolute;
   inset: 0;
+}
+
+.site-video {
+  display: block;
   width: 100%;
   height: 100%;
   object-fit: cover;

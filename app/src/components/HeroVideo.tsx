@@ -1,5 +1,6 @@
 import { useNavigate } from 'react-router-dom';
 import { useStore } from '../store';
+import { HeroVideoSlot } from './SiteVideo';
 
 export default function HeroVideo() {
   const { t } = useStore();
@@ -7,15 +8,7 @@ export default function HeroVideo() {
 
   return (
     <section className="hero">
-      <video
-        className="hero__video"
-        src="/videos/hero-dark.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-        poster="/images/hero/hero-angle-1.jpg"
-      />
+      <HeroVideoSlot className="hero-video-slot" />
       <div className="hero__scrim" />
       <div className="hero__content">
         <div className="kicker">
