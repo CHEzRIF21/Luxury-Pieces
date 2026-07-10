@@ -79,6 +79,17 @@ img {
   overflow-x: hidden;
 }
 
+.bg-audio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+
 /* ---------- Header ---------- */
 
 .header {
@@ -97,9 +108,27 @@ img {
 
 .header__brand {
   display: flex;
-  flex-direction: column;
-  gap: 2px;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
+}
+
+.header__logomark {
+  display: block;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid rgba(229, 169, 78, 0.35);
+  flex-shrink: 0;
+}
+
+.header__logomark img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(2.1);
+  transform-origin: 50% 36%;
 }
 
 .header__logo {
@@ -111,6 +140,7 @@ img {
 }
 
 .header__tagline {
+  margin-top: 2px;
   font-size: 7.5px;
   letter-spacing: 0.42em;
   text-transform: uppercase;
@@ -345,24 +375,22 @@ img {
   border-color: var(--gold);
 }
 
-/* ---------- Hero 360 ---------- */
+/* ---------- Hero video ---------- */
 
 .hero {
   position: relative;
   height: 540px;
   overflow: hidden;
   background: #000;
-  cursor: ew-resize;
-  touch-action: pan-y;
 }
 
-.hero__frame {
+.hero__video {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: contain;
-  object-position: center 20%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .hero__scrim {
@@ -1213,7 +1241,7 @@ img {
   max-width: 430px;
   z-index: 50;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   background: rgba(13, 12, 10, 0.96);
   backdrop-filter: blur(14px);
   -webkit-backdrop-filter: blur(14px);

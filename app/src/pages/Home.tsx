@@ -1,7 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../store';
 import { BRANDS, PRODUCTS } from '../data/products';
-import Hero360 from '../components/Hero360';
+import HeroVideo from '../components/HeroVideo';
 
 export default function Home() {
   const { t, priceText } = useStore();
@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <main>
-      <Hero360 />
+      <HeroVideo />
 
       <section className="houses">
         <div className="houses__label">{t.housesLabel}</div>
@@ -77,7 +77,7 @@ export default function Home() {
         <div className="kicker">
           <div className="kicker__line" />
           <div className="kicker__text" style={{ letterSpacing: '.3em' }}>
-            Luxury Pièces
+            LUXURY PIECES
           </div>
         </div>
         <h2 className="teaser__title">{t.aboutTeaserTitle}</h2>

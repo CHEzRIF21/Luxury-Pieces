@@ -23,7 +23,7 @@ export default function About() {
         <div className="about__herocontent">
           <div className="kicker">
             <div className="kicker__line" />
-            <div className="kicker__text">Luxury Pièces</div>
+            <div className="kicker__text">LUXURY PIECES</div>
           </div>
           <h1 className="about__title">{t.aboutTitle}</h1>
         </div>

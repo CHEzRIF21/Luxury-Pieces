@@ -1,12 +1,54 @@
 import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useStore } from '../store';
-import { CartIcon, HomeIcon, HouseIcon, WatchIcon } from './Icons';
+import { CartIcon, HomeIcon, HouseIcon, ShieldIcon, WatchIcon } from './Icons';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => window.scrollTo(0, 0), [pathname]);
   return null;
+}
+
+function BackgroundAudio() {
+  const ref = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+
+    const playWithSound = () => {
+      el.muted = false;
+      return el.play();
+    };
+
+    playWithSound().catch(() => {
+      el.muted = true;
+      el.play().catch(() => {});
+    });
+
+    const unlock = () => {
+      if (!el.muted) return;
+      playWithSound().catch(() => {});
+    };
+    window.addEventListener('pointerdown', unlock);
+    window.addEventListener('keydown', unlock);
+    return () => {
+      window.removeEventListener('pointerdown', unlock);
+      window.removeEventListener('keydown', unlock);
+    };
+  }, []);
+
+  return (
+    <video
+      ref={ref}
+      className="bg-audio"
+      src="/videos/hero-dark.mp4"
+      autoPlay
+      loop
+      playsInline
+      aria-hidden="true"
+    />
+  );
 }
 
 function Header() {
@@ -20,8 +62,13 @@ function Header() {
   return (
     <header className="header">
       <Link to="/" className="header__brand">
-        <div className="header__logo">Luxury Pièces.</div>
-        <div className="header__tagline">Premium Watches</div>
+        <span className="header__logomark">
+          <img src="/images/logo.jpg" alt="LUXURY PIECES" />
+        </span>
+        <div>
+          <div className="header__logo">LUXURY PIECES</div>
+          <div className="header__tagline">Premium Watches</div>
+        </div>
       </Link>
       <div className="header__right">
         <nav className="header__nav">
@@ -33,6 +80,9 @@ function Header() {
           </NavLink>
           <NavLink to="/about" className={({ isActive }) => navLinkClass(isActive)}>
             {t.navAbout}
+          </NavLink>
+          <NavLink to="/services" className={({ isActive }) => navLinkClass(isActive)}>
+            {t.navServices}
           </NavLink>
           <NavLink
             to="/cart"
@@ -91,6 +141,10 @@ function BottomNav() {
         <HouseIcon />
         <span className="bottomnav__label">{t.navAbout}</span>
       </NavLink>
+      <NavLink to="/services" className={({ isActive }) => itemClass(isActive)}>
+        <ShieldIcon />
+        <span className="bottomnav__label">{t.navServices}</span>
+      </NavLink>
     </nav>
   );
 }
@@ -99,6 +153,7 @@ export default function Layout() {
   return (
     <div className="shell">
       <ScrollToTop />
+      <BackgroundAudio />
       <Header />
       <Outlet />
       <BottomNav />

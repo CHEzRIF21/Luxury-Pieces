@@ -6,6 +6,7 @@ import Collection from './pages/Collection';
 import Product from './pages/Product';
 import Cart from './pages/Cart';
 import About from './pages/About';
+import Services from './pages/Services';
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/product/:id" element={<Product />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
             <Route path="*" element={<Navigate to="/" replace />} />
           </Route>
         </Routes>
