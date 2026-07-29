@@ -37,7 +37,7 @@ export default function Collection() {
         {filtered.map((p) => (
           <Link key={p.id} to={`/product/${p.id}`} className="gcard">
             <div className="gcard__img">
-              <img src={p.img} alt={p.name} loading="lazy" />
+              <img src={p.imgs[0]} alt={p.name} loading="lazy" />
             </div>
             <div className="gcard__body">
               <div className="gcard__brand">{p.brand}</div>

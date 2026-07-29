@@ -8,7 +8,7 @@ export default function Home() {
   const navigate = useNavigate();
 
   const featured = PRODUCTS.filter((p) => p.featured);
-  const rare = PRODUCTS.filter((p) => p.price == null).slice(0, 3);
+  const rare = PRODUCTS.filter((p) => p.rare && p.price == null).slice(0, 4);
 
   return (
     <main>
@@ -40,7 +40,7 @@ export default function Home() {
           {featured.map((p) => (
             <Link key={p.id} to={`/product/${p.id}`} className="pcard">
               <div className="pcard__img">
-                <img src={p.img} alt={p.name} loading="lazy" />
+                <img src={p.imgs[0]} alt={p.name} loading="lazy" />
               </div>
               <div className="pcard__body">
                 <div className="pcard__brand">{p.brand}</div>
@@ -61,7 +61,7 @@ export default function Home() {
           {rare.map((p) => (
             <Link key={p.id} to={`/product/${p.id}`} className="rcard">
               <div className="rcard__img">
-                <img src={p.img} alt={p.name} loading="lazy" />
+                <img src={p.imgs[0]} alt={p.name} loading="lazy" />
               </div>
               <div className="rcard__body">
                 <div className="pcard__brand">{p.brand}</div>

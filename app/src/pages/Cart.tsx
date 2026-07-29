@@ -124,7 +124,7 @@ export default function Cart() {
             {items.map((p) => (
               <div key={p.id} className="citem">
                 <div className="citem__img">
-                  <img src={p.img} alt={p.name} />
+                  <img src={p.imgs[0]} alt={p.name} />
                 </div>
                 <div className="citem__body">
                   <div className="citem__brand">{p.brand}</div>

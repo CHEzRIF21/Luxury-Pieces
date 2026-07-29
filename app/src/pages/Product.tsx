@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { useStore } from '../store';
 import { PRODUCTS } from '../data/products';
@@ -9,6 +9,10 @@ export default function Product() {
   const { t, lang, priceText, showPrice, addToCart, cart } = useStore();
   const [added, setAdded] = useState(false);
   const [requested, setRequested] = useState(false);
+  const [shot, setShot] = useState(0);
+
+  /** Revenir au premier cliché quand on passe d'une pièce à l'autre. */
+  useEffect(() => setShot(0), [id]);
 
   const p = PRODUCTS.find((x) => x.id === id);
   if (!p) return <Navigate to="/collection" replace />;
@@ -31,8 +35,25 @@ export default function Product() {
         </Link>
       </div>
       <div className="product__grid">
-        <div className="product__imgwrap">
-          <img src={p.img} alt={p.name} />
+        <div className="product__gallery">
+          <div className="product__imgwrap">
+            <img src={p.imgs[Math.min(shot, p.imgs.length - 1)]} alt={p.name} />
+          </div>
+          {p.imgs.length > 1 && (
+            <div className="product__thumbs">
+              {p.imgs.map((src, i) => (
+                <button
+                  key={src}
+                  type="button"
+                  className={'thumb' + (i === shot ? ' thumb--active' : '')}
+                  onClick={() => setShot(i)}
+                  aria-label={`${p.name} — ${i + 1}/${p.imgs.length}`}
+                >
+                  <img src={src} alt="" loading="lazy" />
+                </button>
+              ))}
+            </div>
+          )}
         </div>
         <div className="product__info">
           <div className="product__head">
