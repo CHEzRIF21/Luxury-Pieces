@@ -22,7 +22,7 @@ function Header() {
     <header className="header">
       <Link to="/" className="header__brand">
         <span className="header__logomark">
-          <img src="/images/logo.jpg" alt="LUXURY PIECES" />
+          <img src="/images/logo.webp" alt="LUXURY PIECES" width={38} height={38} />
         </span>
         <div>
           <div className="header__logo">LUXURY PIECES</div>

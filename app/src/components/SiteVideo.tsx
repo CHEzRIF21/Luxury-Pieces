@@ -4,44 +4,27 @@ import { createPortal } from 'react-dom';
 
 const SlotContext = createContext<(el: HTMLDivElement | null) => void>(() => {});
 
+/**
+ * Instance unique de la vidéo d'ambiance, déplacée par portail dans le slot du
+ * héros. Elle est TOUJOURS muette : la boutique n'a pas de sonorisation.
+ * Sans slot monté (toutes les pages sauf l'accueil) la vidéo n'existe pas et
+ * n'est donc pas téléchargée.
+ */
 export function SiteVideoProvider({ children }: { children: ReactNode }) {
   const [slot, setSlot] = useState<HTMLDivElement | null>(null);
-  const [fallback, setFallback] = useState<HTMLDivElement | null>(null);
   const videoRef = useRef<HTMLVideoElement>(null);
 
   useEffect(() => {
     const el = videoRef.current;
     if (!el) return;
-
-    const playWithSound = () => {
-      el.muted = false;
-      return el.play();
-    };
-
-    playWithSound().catch(() => {
-      el.muted = true;
-      el.play().catch(() => {});
-    });
-
-    const unlock = () => {
-      if (!el.muted) return;
-      playWithSound().catch(() => {});
-    };
-    window.addEventListener('pointerdown', unlock);
-    window.addEventListener('keydown', unlock);
-    return () => {
-      window.removeEventListener('pointerdown', unlock);
-      window.removeEventListener('keydown', unlock);
-    };
-  }, []);
-
-  const target = slot ?? fallback;
+    el.muted = true;
+    el.play().catch(() => {});
+  }, [slot]);
 
   return (
     <SlotContext.Provider value={setSlot}>
       {children}
-      <div ref={setFallback} className="bg-audio" />
-      {target &&
+      {slot &&
         createPortal(
           <video
             ref={videoRef}
@@ -49,11 +32,12 @@ export function SiteVideoProvider({ children }: { children: ReactNode }) {
             src="/videos/hero-dark.mp4"
             autoPlay
             loop
+            muted
             playsInline
             preload="auto"
             aria-hidden="true"
           />,
-          target,
+          slot,
         )}
     </SlotContext.Provider>
   );

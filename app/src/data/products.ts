@@ -33,7 +33,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'dd40', brand: 'Rolex', name: 'Day-Date 40 Everose', ref: 'M228235-0002',
     price: 42500000, featured: true, rare: true,
-    imgs: ['/images/products/day-date-40-everose.jpg'],
+    imgs: ['/images/products/day-date-40-everose.webp'],
     diam: '40 mm',
     mvt: { fr: 'Automatique, cal. 3255', en: 'Automatic, cal. 3255' },
     mat: { fr: 'Or Everose 18 ct', en: '18 ct Everose gold' },
@@ -41,7 +41,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'gmt', brand: 'Rolex', name: 'GMT-Master II « Pepsi »', ref: 'M126710BLRO',
     price: 15800000, featured: true, rare: true,
-    imgs: ['/images/products/gmt-master-ii-pepsi.jpg'],
+    imgs: ['/images/products/gmt-master-ii-pepsi.webp'],
     diam: '40 mm',
     mvt: { fr: 'Automatique, cal. 3285', en: 'Automatic, cal. 3285' },
     mat: { fr: 'Acier Oystersteel', en: 'Oystersteel' },
@@ -50,8 +50,8 @@ export const PRODUCTS: Product[] = [
     id: 'rainbow', brand: 'Rolex', name: 'Daytona « Rainbow »', ref: 'M116595RBOW',
     price: null, rare: true,
     imgs: [
-      '/images/products/daytona-rainbow.jpg',
-      '/images/catalogue/rolex-daytona-rainbow/1.jpg',
+      '/images/products/daytona-rainbow.webp',
+      '/images/catalogue/rolex-daytona-rainbow/1.webp',
     ],
     diam: '40 mm',
     mvt: { fr: 'Chronographe, cal. 4130', en: 'Chronograph, cal. 4130' },
@@ -61,9 +61,9 @@ export const PRODUCTS: Product[] = [
     id: 'landdweller', brand: 'Rolex', name: 'Land-Dweller 40 Bleu Glacier', ref: 'M127334-0001',
     price: 21400000, featured: true,
     imgs: [
-      '/images/products/land-dweller-bleu-glacier.jpg',
-      '/images/catalogue/rolex-land-dweller-glacier/1.jpg',
-      '/images/catalogue/rolex-land-dweller-glacier/2.jpg',
+      '/images/products/land-dweller-bleu-glacier.webp',
+      '/images/catalogue/rolex-land-dweller-glacier/1.webp',
+      '/images/catalogue/rolex-land-dweller-glacier/2.webp',
     ],
     diam: '40 mm',
     mvt: { fr: 'Automatique, cal. 7135', en: 'Automatic, cal. 7135' },
@@ -72,7 +72,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'landdweller-everose', brand: 'Rolex', name: 'Land-Dweller 40 Or Everose', ref: 'M127335-0001',
     price: null, rare: true,
-    imgs: ['/images/catalogue/rolex-land-dweller-everose/1.jpg'],
+    imgs: ['/images/catalogue/rolex-land-dweller-everose/1.webp'],
     diam: '40 mm',
     mvt: { fr: 'Automatique, cal. 7135', en: 'Automatic, cal. 7135' },
     mat: { fr: 'Or Everose 18 ct', en: '18 ct Everose gold' },
@@ -83,8 +83,8 @@ export const PRODUCTS: Product[] = [
     id: 'aquanaut', brand: 'Patek Philippe', name: 'Aquanaut Travel Time', ref: '5164A-001',
     price: 36500000, rare: true,
     imgs: [
-      '/images/products/aquanaut-travel-time.jpg',
-      '/images/catalogue/patek-aquanaut-5164a/1.jpg',
+      '/images/products/aquanaut-travel-time.webp',
+      '/images/catalogue/patek-aquanaut-5164a/1.webp',
     ],
     diam: '40,8 mm',
     mvt: { fr: 'Automatique, cal. 324 S C FUS', en: 'Automatic, cal. 324 S C FUS' },
@@ -93,7 +93,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'aquanaut-5168g', brand: 'Patek Philippe', name: 'Aquanaut 5168G Kaki', ref: '5168G-010',
     price: null, rare: true,
-    imgs: ['/images/catalogue/patek-aquanaut-5168g/1.jpg'],
+    imgs: ['/images/catalogue/patek-aquanaut-5168g/1.webp'],
     diam: '42,2 mm',
     mvt: { fr: 'Automatique, cal. 324 S C', en: 'Automatic, cal. 324 S C' },
     mat: { fr: 'Or gris 18 ct, bracelet composite kaki', en: '18 ct white gold, khaki composite strap' },
@@ -101,7 +101,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'aquanaut-5968g', brand: 'Patek Philippe', name: 'Aquanaut Chronographe Bleu', ref: '5968G-001',
     price: null, rare: true,
-    imgs: ['/images/catalogue/patek-aquanaut-chrono-5968g/1.jpg'],
+    imgs: ['/images/catalogue/patek-aquanaut-chrono-5968g/1.webp'],
     diam: '42,2 mm',
     mvt: { fr: 'Chronographe flyback, cal. CH 28-520 C', en: 'Flyback chronograph, cal. CH 28-520 C' },
     mat: { fr: 'Or gris 18 ct, bracelet composite bleu', en: '18 ct white gold, blue composite strap' },
@@ -109,7 +109,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'aquanaut-5968a', brand: 'Patek Philippe', name: 'Aquanaut Chronographe Orange', ref: '5968A-001',
     price: null, rare: true,
-    imgs: ['/images/catalogue/patek-aquanaut-chrono-5968a/1.jpg'],
+    imgs: ['/images/catalogue/patek-aquanaut-chrono-5968a/1.webp'],
     diam: '42,2 mm',
     mvt: { fr: 'Chronographe flyback, cal. CH 28-520 C', en: 'Flyback chronograph, cal. CH 28-520 C' },
     mat: { fr: 'Acier, bracelet composite orange', en: 'Steel, orange composite strap' },
@@ -118,8 +118,8 @@ export const PRODUCTS: Product[] = [
     id: 'nautilus-w', brand: 'Patek Philippe', name: 'Nautilus 5711/1A Blanc', ref: '5711/1A-011',
     price: null, rare: true,
     imgs: [
-      '/images/products/nautilus-5711-1a-blanc.jpg',
-      '/images/catalogue/patek-nautilus-5711-blanc/1.jpg',
+      '/images/products/nautilus-5711-1a-blanc.webp',
+      '/images/catalogue/patek-nautilus-5711-blanc/1.webp',
     ],
     diam: '40 mm',
     mvt: { fr: 'Automatique, cal. 26-330 S C', en: 'Automatic, cal. 26-330 S C' },
@@ -129,9 +129,9 @@ export const PRODUCTS: Product[] = [
     id: 'nautilus-b', brand: 'Patek Philippe', name: 'Nautilus 5711/1A Bleu', ref: '5711/1A-010',
     price: null, rare: true,
     imgs: [
-      '/images/products/nautilus-5711-1a-bleu.jpg',
-      '/images/catalogue/patek-nautilus-5711-bleu/1.avif',
-      '/images/catalogue/patek-nautilus-5711-bleu/2.jpg',
+      '/images/products/nautilus-5711-1a-bleu.webp',
+      '/images/catalogue/patek-nautilus-5711-bleu/1.webp',
+      '/images/catalogue/patek-nautilus-5711-bleu/2.webp',
     ],
     diam: '40 mm',
     mvt: { fr: 'Automatique, cal. 26-330 S C', en: 'Automatic, cal. 26-330 S C' },
@@ -140,7 +140,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'nautilus-v', brand: 'Patek Philippe', name: 'Nautilus 5711/1A Vert Olive', ref: '5711/1A-014',
     price: null, rare: true,
-    imgs: ['/images/catalogue/patek-nautilus-5711-vert/1.jpg'],
+    imgs: ['/images/catalogue/patek-nautilus-5711-vert/1.webp'],
     diam: '40 mm',
     mvt: { fr: 'Automatique, cal. 26-330 S C', en: 'Automatic, cal. 26-330 S C' },
     mat: { fr: 'Acier', en: 'Steel' },
@@ -148,7 +148,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'nautilus-rg', brand: 'Patek Philippe', name: 'Nautilus 5990/1R', ref: '5990/1R-001',
     price: null, rare: true,
-    imgs: ['/images/products/nautilus-5990-1r.jpg'],
+    imgs: ['/images/products/nautilus-5990-1r.webp'],
     diam: '40,5 mm',
     mvt: { fr: 'Chronographe flyback, Travel Time', en: 'Flyback chronograph, Travel Time' },
     mat: { fr: 'Or rose 18 ct', en: '18 ct rose gold' },
@@ -156,7 +156,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'nautilus-5712', brand: 'Patek Philippe', name: 'Nautilus 5712/1R Or Rose', ref: '5712/1R-001',
     price: null, rare: true,
-    imgs: ['/images/catalogue/patek-nautilus-5712/1.avif'],
+    imgs: ['/images/catalogue/patek-nautilus-5712/1.webp'],
     diam: '40 mm',
     mvt: { fr: 'Automatique, phase de lune et réserve de marche', en: 'Automatic, moon phase and power reserve' },
     mat: { fr: 'Or rose 18 ct', en: '18 ct rose gold' },
@@ -167,7 +167,7 @@ export const PRODUCTS: Product[] = [
     id: 'ro-ceramique', brand: 'Audemars Piguet',
     name: 'Royal Oak Squelette Céramique Bleue', ref: '15416CE',
     price: null, rare: true,
-    imgs: ['/images/catalogue/ap-royal-oak-squelette-ceramique/1.avif'],
+    imgs: ['/images/catalogue/ap-royal-oak-squelette-ceramique/1.webp'],
     diam: '41 mm',
     mvt: { fr: 'Automatique squelette, Double Balancier', en: 'Openworked automatic, Double Balance Wheel' },
     mat: { fr: 'Céramique bleue, or rose 18 ct', en: 'Blue ceramic, 18 ct rose gold' },
@@ -175,7 +175,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'ro-bleu', brand: 'Audemars Piguet', name: 'Royal Oak Sélection Bleue', ref: '15500ST-01',
     price: null, featured: true, rare: true,
-    imgs: ['/images/catalogue/ap-royal-oak-bleu/1.avif'],
+    imgs: ['/images/catalogue/ap-royal-oak-bleu/1.webp'],
     diam: '41 mm',
     mvt: { fr: 'Automatique, cal. 4302', en: 'Automatic, cal. 4302' },
     mat: { fr: 'Acier, cadran Grande Tapisserie bleu', en: 'Steel, blue Grande Tapisserie dial' },
@@ -183,7 +183,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'ro-argente', brand: 'Audemars Piguet', name: 'Royal Oak Argenté', ref: '15500ST-04',
     price: null, rare: true,
-    imgs: ['/images/catalogue/ap-royal-oak-argente/1.avif'],
+    imgs: ['/images/catalogue/ap-royal-oak-argente/1.webp'],
     diam: '41 mm',
     mvt: { fr: 'Automatique, cal. 4302', en: 'Automatic, cal. 4302' },
     mat: { fr: 'Acier, cadran Grande Tapisserie argenté', en: 'Steel, silver-toned Grande Tapisserie dial' },
@@ -193,7 +193,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'santos', brand: 'Cartier', name: 'Santos Squelette', ref: 'WHSA0015',
     price: 28900000, featured: true, rare: true,
-    imgs: ['/images/products/santos-squelette.jpg'],
+    imgs: ['/images/products/santos-squelette.webp'],
     diam: '39,8 mm',
     mvt: { fr: 'Manuel, cal. 9611 MC', en: 'Hand-wound, cal. 9611 MC' },
     mat: { fr: 'Acier', en: 'Steel' },
@@ -204,8 +204,8 @@ export const PRODUCTS: Product[] = [
     id: 'speedy', brand: 'Omega', name: "Speedmaster '57 Vert", ref: '332.12.41.51.10.001',
     price: 8900000, featured: true,
     imgs: [
-      '/images/products/speedmaster-57-vert.jpg',
-      '/images/catalogue/omega-speedmaster-57-vert/1.jpg',
+      '/images/products/speedmaster-57-vert.webp',
+      '/images/catalogue/omega-speedmaster-57-vert/1.webp',
     ],
     diam: '40,5 mm',
     mvt: { fr: 'Manuel, Co-Axial cal. 9906', en: 'Hand-wound, Co-Axial cal. 9906' },
@@ -214,7 +214,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'speedy-bordeaux', brand: 'Omega', name: "Speedmaster '57 Bordeaux", ref: '332.12.41.51.11.001',
     price: 8900000,
-    imgs: ['/images/catalogue/omega-speedmaster-57-bordeaux/1.jpg'],
+    imgs: ['/images/catalogue/omega-speedmaster-57-bordeaux/1.webp'],
     diam: '40,5 mm',
     mvt: { fr: 'Manuel, Co-Axial cal. 9906', en: 'Hand-wound, Co-Axial cal. 9906' },
     mat: { fr: 'Acier, cuir bordeaux', en: 'Steel, burgundy leather' },
@@ -222,7 +222,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'speedy-noir', brand: 'Omega', name: "Speedmaster '57 Noir", ref: '332.12.41.51.01.001',
     price: 8900000,
-    imgs: ['/images/catalogue/omega-speedmaster-57-noir/1.jpg'],
+    imgs: ['/images/catalogue/omega-speedmaster-57-noir/1.webp'],
     diam: '40,5 mm',
     mvt: { fr: 'Manuel, Co-Axial cal. 9906', en: 'Hand-wound, Co-Axial cal. 9906' },
     mat: { fr: 'Acier, cuir brun', en: 'Steel, brown leather' },
@@ -230,7 +230,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'speedy-bleu', brand: 'Omega', name: "Speedmaster '57 Bleu", ref: '332.12.41.51.03.001',
     price: 8900000,
-    imgs: ['/images/catalogue/omega-speedmaster-57-bleu/1.jpg'],
+    imgs: ['/images/catalogue/omega-speedmaster-57-bleu/1.webp'],
     diam: '40,5 mm',
     mvt: { fr: 'Manuel, Co-Axial cal. 9906', en: 'Hand-wound, Co-Axial cal. 9906' },
     mat: { fr: 'Acier, cuir bleu', en: 'Steel, blue leather' },
@@ -340,7 +340,7 @@ export const PRODUCTS: Product[] = [
     price: 265000,
     imgs: [
       '/images/catalogue/tissot-prx-quartz-argent/1.webp',
-      '/images/catalogue/tissot-prx-quartz-argent/2.jpg',
+      '/images/catalogue/tissot-prx-quartz-argent/2.webp',
     ],
     diam: '40 mm',
     mvt: { fr: 'Quartz', en: 'Quartz' },
@@ -359,7 +359,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'casio-rose', brand: 'Casio', name: 'MTP-B145D Rose', ref: 'MTP-B145D-4A',
     price: 55000,
-    imgs: ['/images/catalogue/casio-mtp-b145d-rose/1.jpg'],
+    imgs: ['/images/catalogue/casio-mtp-b145d-rose/1.webp'],
     diam: '40,5 mm',
     mvt: { fr: 'Quartz, étanche 50 m', en: 'Quartz, 50 m water resistant' },
     mat: { fr: 'Acier, cadran rose', en: 'Steel, pink dial' },
@@ -367,7 +367,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'casio-vert', brand: 'Casio', name: 'MTP-B145D Vert', ref: 'MTP-B145D-3A',
     price: 55000, featured: true,
-    imgs: ['/images/catalogue/casio-mtp-b145d-vert/1.jpg'],
+    imgs: ['/images/catalogue/casio-mtp-b145d-vert/1.webp'],
     diam: '40,5 mm',
     mvt: { fr: 'Quartz, étanche 50 m', en: 'Quartz, 50 m water resistant' },
     mat: { fr: 'Acier, cadran vert', en: 'Steel, green dial' },
@@ -375,7 +375,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'casio-rouge', brand: 'Casio', name: 'MTP-B145D Rouge', ref: 'MTP-B145D-4A2',
     price: 55000,
-    imgs: ['/images/catalogue/casio-mtp-b145d-rouge/1.jpg'],
+    imgs: ['/images/catalogue/casio-mtp-b145d-rouge/1.webp'],
     diam: '40,5 mm',
     mvt: { fr: 'Quartz, étanche 50 m', en: 'Quartz, 50 m water resistant' },
     mat: { fr: 'Acier, cadran rouge', en: 'Steel, red dial' },
@@ -383,7 +383,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'casio-jaune', brand: 'Casio', name: 'MTP-B145D Jaune', ref: 'MTP-B145D-9A',
     price: 55000,
-    imgs: ['/images/catalogue/casio-mtp-b145d-jaune/1.jpg'],
+    imgs: ['/images/catalogue/casio-mtp-b145d-jaune/1.webp'],
     diam: '40,5 mm',
     mvt: { fr: 'Quartz, étanche 50 m', en: 'Quartz, 50 m water resistant' },
     mat: { fr: 'Acier, cadran jaune', en: 'Steel, yellow dial' },
@@ -391,7 +391,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'casio-noir-bleu', brand: 'Casio', name: 'MTP-B145 Noir & Bleu', ref: 'MTP-B145B-2A',
     price: 62000,
-    imgs: ['/images/catalogue/casio-mtp-b145b-bleu/1.jpg'],
+    imgs: ['/images/catalogue/casio-mtp-b145b-bleu/1.webp'],
     diam: '40,5 mm',
     mvt: { fr: 'Quartz, étanche 50 m', en: 'Quartz, 50 m water resistant' },
     mat: { fr: 'Acier IP noir, cadran bleu', en: 'Black IP steel, blue dial' },
@@ -407,7 +407,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'casio-champagne', brand: 'Casio', name: 'MTP-B145G Champagne', ref: 'MTP-B145G-9A',
     price: 68000,
-    imgs: ['/images/catalogue/casio-mtp-b145g-champagne/1.avif'],
+    imgs: ['/images/catalogue/casio-mtp-b145g-champagne/1.webp'],
     diam: '40,5 mm',
     mvt: { fr: 'Quartz, étanche 50 m', en: 'Quartz, 50 m water resistant' },
     mat: { fr: 'Acier doré, cadran champagne', en: 'Gold-tone steel, champagne dial' },
@@ -449,7 +449,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'poedagar-930-bleu', brand: 'Poedagar', name: '930 Acier Bleu', ref: 'PD-930-SB',
     price: 39000,
-    imgs: ['/images/catalogue/poedagar-930-bleu/1.jpg'],
+    imgs: ['/images/catalogue/poedagar-930-bleu/1.webp'],
     diam: '40 mm',
     mvt: { fr: 'Quartz jour-date', en: 'Quartz, day-date' },
     mat: { fr: 'Acier, bracelet intégré', en: 'Steel, integrated bracelet' },
@@ -457,7 +457,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 'poedagar-930-vert', brand: 'Poedagar', name: '930 Acier Vert', ref: 'PD-930-SG',
     price: 39000,
-    imgs: ['/images/catalogue/poedagar-930-vert/1.jpg'],
+    imgs: ['/images/catalogue/poedagar-930-vert/1.webp'],
     diam: '40 mm',
     mvt: { fr: 'Quartz jour-date', en: 'Quartz, day-date' },
     mat: { fr: 'Acier, bracelet intégré', en: 'Steel, integrated bracelet' },
@@ -473,12 +473,21 @@ export const PRODUCTS: Product[] = [
   {
     id: 'poedagar-930-or', brand: 'Poedagar', name: '930 Or Champagne', ref: 'PD-930-GC',
     price: 43000,
-    imgs: ['/images/catalogue/poedagar-930-or/1.jpg'],
+    imgs: ['/images/catalogue/poedagar-930-or/1.webp'],
     diam: '40 mm',
     mvt: { fr: 'Quartz jour-date', en: 'Quartz, day-date' },
     mat: { fr: 'Acier doré, cadran champagne', en: 'Gold-tone steel, champagne dial' },
   },
 ];
+
+/**
+ * Variante 400 px d'un cliché, générée à côté de l'original (`1.webp` ->
+ * `1-sm.webp`). À utiliser partout où l'image s'affiche petit : grilles,
+ * panier, miniatures de la fiche produit.
+ */
+export function thumb(src: string): string {
+  return src.replace(/\.webp$/, '-sm.webp');
+}
 
 export function formatPrice(n: number): string {
   return n.toLocaleString('fr-FR').replace(/ | /g, ' ') + ' FCFA';

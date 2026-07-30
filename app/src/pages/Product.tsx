@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Link, Navigate, useParams } from 'react-router-dom';
 import { useStore } from '../store';
-import { PRODUCTS } from '../data/products';
+import { PRODUCTS, thumb } from '../data/products';
 import { BackIcon, ShieldIcon } from '../components/Icons';
 
 export default function Product() {
@@ -49,7 +49,7 @@ export default function Product() {
                   onClick={() => setShot(i)}
                   aria-label={`${p.name} — ${i + 1}/${p.imgs.length}`}
                 >
-                  <img src={src} alt="" loading="lazy" />
+                  <img src={thumb(src)} alt="" loading="lazy" decoding="async" />
                 </button>
               ))}
             </div>

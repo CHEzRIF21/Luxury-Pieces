@@ -1,6 +1,6 @@
 import { Link, useNavigate } from 'react-router-dom';
 import { useStore } from '../store';
-import { BRANDS, PRODUCTS } from '../data/products';
+import { BRANDS, PRODUCTS, thumb } from '../data/products';
 import HeroVideo from '../components/HeroVideo';
 
 export default function Home() {
@@ -40,7 +40,7 @@ export default function Home() {
           {featured.map((p) => (
             <Link key={p.id} to={`/product/${p.id}`} className="pcard">
               <div className="pcard__img">
-                <img src={p.imgs[0]} alt={p.name} loading="lazy" />
+                <img src={thumb(p.imgs[0])} alt={p.name} loading="lazy" decoding="async" />
               </div>
               <div className="pcard__body">
                 <div className="pcard__brand">{p.brand}</div>
@@ -61,7 +61,7 @@ export default function Home() {
           {rare.map((p) => (
             <Link key={p.id} to={`/product/${p.id}`} className="rcard">
               <div className="rcard__img">
-                <img src={p.imgs[0]} alt={p.name} loading="lazy" />
+                <img src={thumb(p.imgs[0])} alt={p.name} loading="lazy" decoding="async" />
               </div>
               <div className="rcard__body">
                 <div className="pcard__brand">{p.brand}</div>

@@ -1,6 +1,6 @@
 import { Link, useSearchParams } from 'react-router-dom';
 import { useStore } from '../store';
-import { BRANDS, PRODUCTS } from '../data/products';
+import { BRANDS, PRODUCTS, thumb } from '../data/products';
 
 export default function Collection() {
   const { t, priceText } = useStore();
@@ -37,7 +37,7 @@ export default function Collection() {
         {filtered.map((p) => (
           <Link key={p.id} to={`/product/${p.id}`} className="gcard">
             <div className="gcard__img">
-              <img src={p.imgs[0]} alt={p.name} loading="lazy" />
+              <img src={thumb(p.imgs[0])} alt={p.name} loading="lazy" decoding="async" />
             </div>
             <div className="gcard__body">
               <div className="gcard__brand">{p.brand}</div>

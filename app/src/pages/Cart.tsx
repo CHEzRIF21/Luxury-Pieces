@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useStore } from '../store';
-import { PRODUCTS, formatPrice } from '../data/products';
+import { PRODUCTS, formatPrice, thumb } from '../data/products';
 import { BackIcon, CheckIcon, CloseIcon, EmptyCartIcon, ShieldIcon } from '../components/Icons';
 
 type Step = 'cart' | 'form' | 'done';
@@ -124,7 +124,7 @@ export default function Cart() {
             {items.map((p) => (
               <div key={p.id} className="citem">
                 <div className="citem__img">
-                  <img src={p.imgs[0]} alt={p.name} />
+                  <img src={thumb(p.imgs[0])} alt={p.name} loading="lazy" />
                 </div>
                 <div className="citem__body">
                   <div className="citem__brand">{p.brand}</div>
