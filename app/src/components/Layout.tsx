@@ -1,4 +1,4 @@
-import { Link, NavLink, Outlet, useLocation } from 'react-router-dom';
+import { Link, NavLink, Outlet, useLocation, useNavigationType } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useStore } from '../store';
 import { CartIcon, HomeIcon, HouseIcon, ShieldIcon, WatchIcon } from './Icons';
@@ -6,7 +6,15 @@ import { SiteVideoProvider } from './SiteVideo';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
-  useEffect(() => window.scrollTo(0, 0), [pathname]);
+  const navType = useNavigationType();
+
+  useEffect(() => {
+    // Sur un retour arrière (POP) on laisse le navigateur restaurer la position :
+    // l'utilisateur retrouve la boutique là où il l'avait quittée.
+    if (navType === 'POP') return;
+    window.scrollTo(0, 0);
+  }, [pathname, navType]);
+
   return null;
 }
 

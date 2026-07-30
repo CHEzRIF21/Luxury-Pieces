@@ -30,6 +30,9 @@ export function SiteVideoProvider({ children }: { children: ReactNode }) {
             ref={videoRef}
             className="site-video"
             src="/videos/hero-dark.mp4"
+            /* 7 Ko : la bannière s'affiche tout de suite, la vidéo prend le
+               relais dès qu'elle est prête. */
+            poster="/videos/hero-poster.webp"
             autoPlay
             loop
             muted

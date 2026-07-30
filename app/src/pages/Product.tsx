@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { Link, Navigate, useParams } from 'react-router-dom';
+import { Navigate, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { useStore } from '../store';
 import { PRODUCTS, thumb } from '../data/products';
 import { BackIcon, ShieldIcon } from '../components/Icons';
@@ -7,12 +7,25 @@ import { BackIcon, ShieldIcon } from '../components/Icons';
 export default function Product() {
   const { id } = useParams();
   const { t, lang, priceText, showPrice, addToCart, cart } = useStore();
+  const navigate = useNavigate();
+  const location = useLocation();
   const [added, setAdded] = useState(false);
   const [requested, setRequested] = useState(false);
   const [shot, setShot] = useState(0);
 
   /** Revenir au premier cliché quand on passe d'une pièce à l'autre. */
   useEffect(() => setShot(0), [id]);
+
+  /**
+   * Dépile l'historique quand on arrive depuis le site : on retrouve la
+   * boutique avec son filtre et sa position de défilement, et le bouton retour
+   * du navigateur ne renvoie pas dans la fiche qu'on vient de quitter.
+   * `key === 'default'` = entrée directe sur cette URL, il n'y a rien à dépiler.
+   */
+  const goBack = () => {
+    if (location.key === 'default') navigate('/collection');
+    else navigate(-1);
+  };
 
   const p = PRODUCTS.find((x) => x.id === id);
   if (!p) return <Navigate to="/collection" replace />;
@@ -29,10 +42,10 @@ export default function Product() {
   return (
     <main>
       <div className="product__back">
-        <Link to="/collection" className="backlink">
+        <button type="button" className="backlink" onClick={goBack}>
           <BackIcon size={14} />
           <span>{t.back}</span>
-        </Link>
+        </button>
       </div>
       <div className="product__grid">
         <div className="product__gallery">
